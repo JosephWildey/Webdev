@@ -1,16 +1,40 @@
-	In my last tutorial on HTML I left out a lot of attributes for tags. That is because I would like to go over them now that I am covering Cascading Style Sheets. It's seriously been a very long time since I've touched a website but my websites were always large. As a result, the moment I learned about CSS it became a god-send. They are a quick and easy way to maintain unification across pages, and keep your important code all in one spot. Furthermore, you can add specific rules to page in case there are specific elements not covered by the universal sheet. I am going to go over both cases in this tutorial.
-	My goal with this tutorial is the same as with my HTML tutorial, to teach you enough to be able to confidently google the answers required. Also, to be able to wake up at 3 AM and realize you know why a website doesn't look the way you want. It drives me nuts when a solution to any problem comes to me out of nowhere, and now it'll drive you nuts too if I am successful. 
-	First, I am going to go over a universal CSS document. Remember how the HTML document resembles a person? Well, when you want to add a CSS document you stick it in the head because the best way to make things unified is behind the scenes. Unfortunately this tag is not as easy to simplify as most HTML tags, and I forgot some important details in the last tutorial. First, here is the tag you use in the header to declare an external CSS document: <link rel="stylesheet" type="text/css" href="mystyle.css">.
-	Now. For the important bit I forgot. Notice how href="mystyle.css" is not mentioning the site the document is hosted on? This is because it can use relative and absolute pathnames. A relative pathname is a pathname that starts where you're located. Think of this as stating that the mystyle.css document is located pretty high up the server hieararchy. It is normal for external style sheets to be located near the ".index" file of your website, although I am not a fascist and you can place it wherever you please. Just remember where it is at and that the domain name is always implied, so you can just specify the directories required to reach it. This is also true for pages, images, and videos. Next I will go over CSS syntax to make implementing this fancy tool easier.
-	CSS syntax is fairly straightforward, just like HTML. You target the element you wish to change, and then include the attribute of that element you wish to change, and include the value you wish to change that attribute to. Elements are effectively tags, except sometimes you will not specifiy some things in HTML documents that you will change in CSS. The idea is that you can technically set an HTML document's background color but it will look a lot better and be a lot easier in the long run if you do it in an CSS External Sheet. The way you set a background color is:
+	In my last tutorial on HTML I left out a lot of attributes for tags. That is because I would like to go over them now that I am 
+	covering Cascading Style Sheets. It's seriously been a very long time since I've touched a website but my websites were always 
+	large. As a result, the moment I learned about CSS it became a god-send. They are a quick and easy way to maintain unification 
+	across pages, and keep your important code all in one spot. Furthermore, you can add specific rules to page in case there are 
+	specific elements not covered by the universal sheet. I am going to go over both cases in this tutorial.
+	My goal with this tutorial is the same as with my HTML tutorial, to teach you enough to be able to confidently google the 
+	answers required. Also, to be able to wake up at 3 AM and realize you know why a website doesn't look the way you want. It 
+	drives me nuts when a solution to any problem comes to me out of nowhere, and now it'll drive you nuts too if I am successful. 
+	First, I am going to go over a universal CSS document. Remember how the HTML document resembles a person? Well, when you want 
+	to add a CSS document you stick it in the head because the best way to make things unified is behind the scenes. Unfortunately 
+	this tag is not as easy to simplify as most HTML tags, and I forgot some important details in the last tutorial. First, here is 
+	the tag you use in the header to declare an external CSS document: <link rel="stylesheet" type="text/css" href="mystyle.css">.
+	Now. For the important bit I forgot. Notice how href="mystyle.css" is not mentioning the site the document is hosted on? This 
+	is because it can use relative and absolute pathnames. A relative pathname is a pathname that starts where you're located. 
+	Think of this as stating that the mystyle.css document is located pretty high up the server hieararchy. It is normal for 
+	external style sheets to be located near the ".index" file of your website, although I am not a fascist and you can place it 
+	wherever you please. Just remember where it is at and that the domain name is always implied, so you can just specify the 
+	directories required to reach it. This is also true for pages, images, and videos. Next I will go over CSS syntax to make 
+	implementing this fancy tool easier.
+	CSS syntax is fairly straightforward, just like HTML. You target the element you wish to change, and then include the attribute 
+	of that element you wish to change, and include the value you wish to change that attribute to. Elements are effectively tags, 
+	except sometimes you will not specifiy some things in HTML documents that you will change in CSS. The idea is that you can 
+	technically set an HTML document's background color but it will look a lot better and be a lot easier in the long run if you do 
+	it in an CSS External Sheet. The way you set a background color is:
 	body {
 		background-color: lightblue;
 	}
-	In this case the "body" is the element. We are changing the background-color attribute of body to lightblue. CSS also allows hexcodes and images sometimes, where appropriate. You always work this way in CSS, even if it is not always obvious. For example, let's say you want to change the text of your website's title, the one in the header tags. Here's how you pull that off:
+	In this case the "body" is the element. We are changing the background-color attribute of body to lightblue. CSS also allows 
+	hexcodes and images sometimes, where appropriate. You always work this way in CSS, even if it is not always obvious. For 
+	example, let's say you want to change the text of your website's title, the one in the header tags. Here's how you pull that 
+	off:
 	h1 {
 		color:navy;
 	}
-	There are a ton of options out there too. You can align things, make links a different color once they've been clicked, all sorts of really cool stuff. Furthermore, in an external stylesheet you do not need any of the HTML code of an HTML document. Therefore, our external stylesheet should look like the following:
+	There are a ton of options out there too. You can align things, make links a different color once they've been clicked, all 
+	sorts of really cool stuff. Furthermore, in an external stylesheet you do not need any of the HTML code of an HTML document. 
+	Therefore, our external stylesheet should look like the following:
 
 	h1 {
 		color:navy;
@@ -19,8 +43,14 @@
 	body {
 		background-color: lightblue;
 	}
-	I am doing it this way because I feel it makes the most sense. I do not believe that maintaining the same order as the HTML document is required but it makes the stylesheets more readable for yourself. You want to mess up as little as possible when inspiration hits you like a brick at 3 AM. There are two other methods of altering a page with CSS, and those are both internal style sheets and inline style. First I will briefly go over internal style sheets.
-	If your external stylesheet does not cover all of the elements on a given page you have two options to compliment that external sheet. Perhaps the most common is an internal stylesheet. These can make your HTML look really messy and be difficult to update, so either make sure your formatting is really clean or try to minimize their use. I recommend both. Anyway, internal style sheets are encapsulated in style tags, and belong in the head of the HTML document. For example:
+	I am doing it this way because I feel it makes the most sense. I do not believe that maintaining the same order as the HTML 
+	document is required but it makes the stylesheets more readable for yourself. You want to mess up as little as possible when 
+	inspiration hits you like a brick at 3 AM. There are two other methods of altering a page with CSS, and those are both internal 
+	style sheets and inline style. First I will briefly go over internal style sheets.
+	If your external stylesheet does not cover all of the elements on a given page you have two options to compliment that external 
+	sheet. Perhaps the most common is an internal stylesheet. These can make your HTML look really messy and be difficult to update, 
+	so either make sure your formatting is really clean or try to minimize their use. I recommend both. Anyway, internal style sheets 
+	are encapsulated in style tags, and belong in the head of the HTML document. For example:
 <html>
 	<head>
 		<style>
@@ -35,7 +65,9 @@
 	</head>
 	<body></body>
 </html>
-	I am going all out to reinforce ideas expressed in the last tutorial. However, that will change the color of any h1 sized text, and the background of the site just as it would if you used an external stylesheet. Here is what it would look like if you used the external sheet instead:
+	I am going all out to reinforce ideas expressed in the last tutorial. However, that will change the color of any h1 sized text, 
+	and the background of the site just as it would if you used an external stylesheet. Here is what it would look like if you used 
+	the external sheet instead:
 
 <html>
 	<head>
@@ -43,15 +75,27 @@
 	</head>
 	<body></body>
 </html>
-	See how much cleaner your head tag is? Sometimes it is required to use an internal stylesheet but if possible it should be avoided. The final option is inline style. Inline style is restricted to even less of the HTML document than external stylesheets. They can affect only a single element. However, they can provide a unique style for that element. The syntax otherwise is the same:
-<h1 style="color:blue;margin-left:30px;">This is a header</h1>. I ripped my example from w3schools.com, a great resource for this stuff. Anyway, let's break down that example real quick. 
-	If you're familiar with programming then you know that you end lines of commands with the semicolon. For example, function calls are ended with a semicolon. You can think of any attribute change as a function call. As you may also know you can have many function calls on a single line in C++ as long as you terminate lines correctly. The same is true for changing attributes in CSS. However, a little bit of space will make it far easier to read for you to read later on. 
-	The last thing to remember about CSS is that order matters. If you want to override an external stylesheet with an internal stylesheet, the external stylesheet must come before the internal stylesheet in the HTML head, otherwise it will not work. Furthermore, if you must overwrite either of them then you can use inline style because that is the highest in the hierarchy. The order in which browsers handle CSS is:
+	See how much cleaner your head tag is? Sometimes it is required to use an internal stylesheet but if possible it should be 
+	avoided. The final option is inline style. Inline style is restricted to even less of the HTML document than external 
+	stylesheets. They can affect only a single element. However, they can provide a unique style for that element. The syntax 
+	otherwise is the same:
+<h1 style="color:blue;margin-left:30px;">This is a header</h1>. I ripped my example from w3schools.com, a great resource for this stuff. 
+Anyway, let's break down that example real quick. 
+	If you're familiar with programming then you know that you end lines of commands with the semicolon. For example, function 
+	calls are ended with a semicolon. You can think of any attribute change as a function call. As you may also know you can have 
+	many function calls on a single line in C++ as long as you terminate lines correctly. The same is true for changing attributes 
+	in CSS. However, a little bit of space will make it far easier to read for you to read later on. 
+	The last thing to remember about CSS is that order matters. If you want to override an external stylesheet with an internal 
+	stylesheet, the external stylesheet must come before the internal stylesheet in the HTML head, otherwise it will not work. 
+	Furthermore, if you must overwrite either of them then you can use inline style because that is the highest in the hierarchy. 
+	The order in which browsers handle CSS is:
 
 inline style
 external and internal style sheets
 browser defaults
 
-	There are a lot of things you will have to google. To help cut that down I will put together a sample CSS stylesheet. Programming is really something you have to do to remember, and it took me a while to understand CSS. Syntatically it is different than HTML in quite a few ways.
+	There are a lot of things you will have to google. To help cut that down I will put together a sample CSS stylesheet. 
+	Programming is really something you have to do to remember, and it took me a while to understand CSS. Syntatically it is 
+	different than HTML in quite a few ways.
 	
 	At times I relied on w3schools.com. It's seriously a great resource.

@@ -1,0 +1,149 @@
+	For this document I am going to cover all the important stuff a barebones HTML document (website). There are some specific stuff that you can do with HTML5 that I will leave for an update. I doubt I will ever be able to create a fully comprehensive HTML tutorial anyway, so hopefully you will get enough out of this one that you can google your answers and know what to do.
+	HTML or Hypertext Markup Language is used for every website we see, and is a way for servers to communicate with the browser. Not every browser will handle every element of HTML the exact same, so when you check a website make sure to check it in various browsers. At the very least, check it in the most popular ones, Chrome and Firefox and on mobile devices. An important tip about SEO (Search Engine Optimization): Google will rank your site higher if your website is mobile friendly because a large amount of legitimate web traffic nowadays comes from mobile devices.
+	Before I continue, it is important to note that anything encapsulated in arrows, '<' and '>', will be referred to as a tag. First, we can improve browser compatibility by the use of a doctype html tag. This is how the tag looks: <!doctype html>. This is just telling the browser that your website is using HTML because it could be an XML document or something else. Furthermore, even though the HTML follows the doctype tag, that is just encapsulating our beautiful code. We open our HTML tag immediately after our doctype tag, but will not close it until we finish our code. The html tag is simply <html>. We want highly functional and operational.
+	Now that you have your <!doctype html> and <html> tag, the next step is to add your head tag. If you think of an HTML document as a human being, all the important stuff that the user doesn't need to see, and some of it they did gets stuck here. For example, if you get into CSS (Cascade Style Sheet) and Javascript you will use the head portion of an HTML document more than you will in this tutorial. That is because even though the user sees the end result of the Cascade Style Sheet, they do not need the see the color:000000 bit. This section is started with the <head> tag.
+	Within the head tag you can include metadata which is useful for Search Engine Optimization. This step is not required for webdesign, but if you're making a website one of the goals to reach the broadest base possible. As a result, you will want to maximize the SEO of your website and to achieve that you will want to include metadata. Anything relating to metadata will use the meta tag. However, the tag will include elements this time. For example, <meta charset="UTF-8">. All this means is that the website is using Unicode for its character set. That is, every character that is on the site will be in Unicode. From there, you can include other meta tags:
+<meta name="description" content="A more detailed description">
+<meta name="keywords" content="A list of keywords related to content">
+<meta name="author" content="Your name goes here">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	The viewport tag is important for both SEO and compatability reasons. It is a new metadata tag that did not exist prior to HTML5. In a nutshell, it allows the designer to set the zoom and width settings of the site. As I said above, things can get wonky between browsers or even devices. The viewport meta tag allows you to maintain consistency between devices. Since it will make your site mobile device friendly, Google will rank it more favorably against similar sites. Use the tag. In fact, use all of them if you have a reason to. These tags will not make a noticeable difference in the load of your site, but they will improve traffic.
+	Under or after the metadata comes the title of the site. While this title will not be noticeable on the website itself, it will be noticeable in the browser tab. In order to set a title for your website, simply use the "title" tag and put your title in between the tags. For example, <title>My Site</title>. If you want to display the same title on your website, it is common to do so in between the title tags because that will put your text at the top of the site. Even though text between the "title" tag should be concise, you can make the title you want people to see be larger. To do this you will use the header tag, with a chosen size. There are three sizes for a header tag, 1-3. The smaller the number the larger the text. h2 is usually a pretty good size for a title, but feel free to experiment. Simply encapsulate your desired title within h2 tags, as such: <h2>My Website's Title</h2>. This is the first time we have had to close tags, and this is also the most common way to close tags. To keep things simple I will discuss the other option for closing tags when it is relevant. 
+	Now you can go ahead and close the head tag in a similar fashion. Make sure your exit-tag is below the final title-tag. However, make sure you do not use the exit html tag just yet. We have more work to do within the html tags.
+	As a refresher, your site should now look like:
+<!doctype html>
+	<html>
+		<head>
+			<meta name="description" content="A more detailed description">
+<meta name="keywords" content="A list of keywords related to content">
+<meta name="author" content="Your name goes here">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>My Site</title>
+			<h2>My Website's Title</h2>
+		</head>
+	Now we will move onto the meat and potatoes of the website, the body. Remember, an HTML document resembles a human body. The body is the noticeable part of the document, just as it is of the human body. You can tell the browser that it has reached the body by using the body tag. Once you do this you open yourself up to all sorts of neat ways of formatting the website and text. Perhaps the most common element you will use is the paragraph tag. The paragraph tag will automatically indent your text, and is the easiest way to indent your text. You can technically "&nbsp;", but it does not look as pretty and it is usually used to help line things up nicely. The paragraph tag is probably the easiest tag we have come across so far, it is simply <p>. When you use the paragraph tag, you type immediately after the arrows and when your paragraph is complete you close the paragraph with </p>.
+	There are a few other design elements you may wish to include. However, the most popular ones are pretty easy once you remember them. In a lot of ways HTML is like riding a bike. Even though I have not used it since I last built a website in the early-mid 2000's, I still remember enough to write this. As a result, I am going to sort of gloss over some of the more popular elements with examples.
+	<a href="http://www.somewebsitegoeshere.com">Name or description of the site can go here so the visitor can click on it</href>
+	<img src="http://www.thelinktoanimagegoeshere" alt="alternative text/hover text"></img>
+	Another common design element is the line break. However, the line break uses what is known as a self-closing tag. This means that the tag is closed when it is opened, since it performs no real use we can do this safely. The line break tag looks like: <br />. All this element does is adds a line of whitespace between the content before and after the tag. Now I am going to go over lists and tables. Forms do exist and are HTML, but are useless if you are not processing their content. In order to process their content you need to include Javascript or server-side scripting. As a result, I will leave forms for those tutorials. They are very straightforward anyway.  
+	HTML5 utilizes bulleted and numbered lists for listing content. If you want a bulleted list, then you use the unordered list tag <ul>. Within that tag every element you want to appear as part of the list you will tag with <li>. The list item tag is closed at the end of the list element. Then once the list is closed the tag is also closed. For example,
+<ul>
+<li>this</li>
+<li>that</li>
+</ul>
+	If you want a numbered list the syntax is the same, except you use the ordered list tag <ol>. 
+<ol>
+<li>this</li>
+<li>that</li>
+</ol>
+	Tables in HTML are started with the table tag. However, note that tables have both rows and columns that can be filled. A popular use for tables in webdev is to organize content. For example, if you have a ton of articles on your site and want to keep them together you can use a table. With a little javascript you can make it look real pretty. So, you start a table with the <table> tag. However, you can also set attributes including width in this tag.
+	Tables have rows and headers, and after you have opened the table you use the table row tag <tr>. In between the table row tag, you define each table header with the <th> tag. You must close out the table header tag after each desired table header </th>. Information that goes into the table beneath the headers is encapsulated in <td> tags. Once the element is finished, you close out the td tag. Once you have enough elements encapsulated in <th> or <td>, you close out the tr tag. Once you are done with tr tags, you close out the table. Here is an example table:
+
+<table style="width:100%">
+	<tr>
+		<th>Company</th>
+		<th>Contact</th>
+		<th>Country</th>
+	</tr>
+	<tr>
+		<td>Alfreds Futterkiste</td>
+		<td>Maria Anders</td>
+		<td>Germany</td>
+	</tr>
+</table>
+
+The output will resemble:
+
+Company			Contact		Country
+Alfreds Futterkiste	Maria Anders	Germany
+
+	I almost forgot about the video tag. It was a recent addition to HTML to thankfully replace Flash. While the brilliance of Badgers and Homestar Runner are unmatched, Flash was an absolute mess that needed to go. Anyway, you can play a video on your site with the use of the video tag. The video tag is just <video>, but you can include attributes in the tag such as width, height, and controls. For example, <video width="320" height="240" controls>. Then in order to play the actual video you must tell the tag where the video is located. You use the source tags for this, and tell it what type of video you are playing. <source src="movie.mp4" type="video/mp4">. Lastly, you can include a message that says the browser does not support HTML5's handy video tag, by just typing the message in between the video tags. Once you've done all that you can close out the video tag. For example:
+
+<video width="320" height="240" controls>
+	<source src="movie.mp4" type="video/mp4">
+	Your browser does not support the HTML5 video tag.
+</video>
+	Before I end this tutorial I am going to recap what our site should look like:
+
+<!doctype html>
+	<html>
+		<head>
+			<meta name="description" content="A more detailed description">
+<meta name="keywords" content="A list of keywords related to content">
+<meta name="author" content="Your name goes here">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>My Site</title>
+			<h2>My Website's Title</h2>
+		</head>
+		<body>
+			<p>Some text goes here.</p>
+			<p>Some more text, new paragraph.</p>
+			<p>Now a paragraph with a link and image! <a href="http://www.somewebsitegoeshere.com">Name or description of the site can go here so the visitor can click on it</href>
+				<br />
+			   <img src="http://www.thelinktoanimagegoeshere" alt="alternative text/hover text"></img></p>
+			<ul>
+				<li>Bullet 1</li>
+				<li>Bullet 2</li>
+			</ul>
+			<br />
+			<ol>
+				<li>Number 1</li>
+				<li>Number 2</li>
+			</ol>
+			<br />
+			<table style="width:100%">
+				<tr>
+					<th>Company</th>
+					<th>Contact</th>
+					<th>Country</th>
+				</tr>
+				<tr>
+					<td>Alfreds Futterkiste</td>
+					<td>Maria Anders</td>
+					<td>Germany</td>
+				</tr>
+			</table>
+	Now we can close out the body and html tags. This is the end result:
+
+<!doctype html>
+	<html>
+		<head>
+			<meta name="description" content="A more detailed description">
+<meta name="keywords" content="A list of keywords related to content">
+<meta name="author" content="Your name goes here">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>My Site</title>
+			<h2>My Website's Title</h2>
+		</head>
+		<body>
+			<p>Some text goes here.</p>
+			<p>Some more text, new paragraph.</p>
+			<p>Now a paragraph with a link and image! <a href="http://www.somewebsitegoeshere.com">Name or description of the site can go here so the visitor can click on it</href>
+				<br />
+			   <img src="http://www.thelinktoanimagegoeshere" alt="alternative text/hover text"></img></p>
+			<ul>
+				<li>Bullet 1</li>
+				<li>Bullet 2</li>
+			</ul>
+			<br />
+			<ol>
+				<li>Number 1</li>
+				<li>Number 2</li>
+			</ol>
+			<br />
+			<table style="width:100%">
+				<tr>
+					<th>Company</th>
+					<th>Contact</th>
+					<th>Country</th>
+				</tr>
+				<tr>
+					<td>Alfreds Futterkiste</td>
+					<td>Maria Anders</td>
+					<td>Germany</td>
+				</tr>
+			</table>
+	</body>
+</html>
+
+	You will notice that we closed out the body and head before the HTML, this is because we opened those tags after the HTML tag. In HTML, just like any language we close out tags the order in which we open them. That way the browser and computer can understand us.

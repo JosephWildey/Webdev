@@ -53,3 +53,5 @@ external and internal style sheets
 browser defaults
 
 	There are a lot of things you will have to google. To help cut that down I will put together a sample CSS stylesheet. Programming is really something you have to do to remember, and it took me a while to understand CSS. Syntatically it is different than HTML in quite a few ways.
+	
+	At times I relied on w3schools.com. It's seriously a great resource.

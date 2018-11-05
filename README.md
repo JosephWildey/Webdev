@@ -5,5 +5,8 @@ to google stuff from time to time at 3 AM. If you need a comprehensive resource 
 I am self-taught in Web design and if I tried to list every resource possible it'd take all day AND it's quite possible some of those
 sources would either be obsolete or inaccessible. That is the nature of the internet and self-study. Unfortunately, if you are not clever
 or already well known for what you know it is also the nature of portfolios.
+
+That being said, all of the tutorials and material will add up to a functioning website. Something that can be referred to for help.
+
 Also:
 https://www.youtube.com/watch?v=7gz1DIIxmEE

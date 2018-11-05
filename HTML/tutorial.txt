@@ -209,3 +209,6 @@ Alfreds Futterkiste	Maria Anders	Germany
 	You will notice that we closed out the body and head before the HTML, this is because we opened those tags after the HTML tag. 
 	In HTML, just like any language we close out tags the order in which we open them. That way the browser and computer can 
 	understand us.
+
+The example for the table is from: https://www.w3schools.com/html/html_tables.asp.
+I highly recommend w3schools.com if you forget anything anyway. It's a good resource.
